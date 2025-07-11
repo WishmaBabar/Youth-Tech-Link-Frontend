@@ -1,0 +1,383 @@
+/*==============================
+  Youth Tech Link - Finalized style.css
+==============================*/
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  color: #0b3d91;
+  margin-bottom: 0.75rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0b3d91;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a6c9ff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px) brightness(0.6);
+}
+
+.hero-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+  max-width: 600px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  background-color: #0b3d91;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #092e6d;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e6f0ff;
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+}
+
+
+.content-section,
+.service-section,
+.team-section,
+.events-section,
+.upload-section,
+.notification-section,
+.podcast-section,
+.webinar-section,
+.contact-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.card-container,
+.service-section,
+.team-grid,
+.events-section,
+.projects-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Cards */
+.course-card,
+.service-card,
+.team-card,
+.event-card,
+.project-card,
+.podcast-card,
+.webinar-card,
+.notification-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover,
+.service-card:hover,
+.project-card:hover,
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Forms */
+.upload-form,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form button,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.upload-form button,
+.contact-form button {
+  background-color: #0b3d91;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.upload-form button:hover,
+.contact-form button:hover {
+  background-color: #092e6d;
+}
+
+/* Footer */
+.footer {
+  background-color: #0b3d91;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Map */
+.map iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: #0b3d91;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .card-container,
+  .team-grid,
+  .projects-gallery,
+  .service-section,
+  .events-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
+
+.highlights{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.highlight-card{
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: calc(33.333% - 1rem);
+  text-align: center;
+}
+
+.podcast-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.podcast-card {
+  width: 500px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.webinar-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.webinar-card {
+  width: 500px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.notification-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.notification-box {
+  width: 500px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.team-card {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

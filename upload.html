@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Portal - Youth Tech Link</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Youth Tech Link</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="upload.html">Upload</a>
+      <a href="notifications.html">Notifications</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="webinars.html">Webinars</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <section class="page-header">
+    <h1>File Submission Portal</h1>
+  </section>
+
+  <section class="upload-section">
+    <form action="#" method="post" enctype="multipart/form-data" class="upload-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="department">Department:</label>
+      <select id="department" name="department" required>
+        <option value="development">Development</option>
+        <option value="design">Design</option>
+        <option value="events">Events</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="file">Upload File:</label>
+      <input type="file" id="file" name="file" required>
+
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Youth Tech Link. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
